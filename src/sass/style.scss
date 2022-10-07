@@ -1,0 +1,28 @@
+@use "reset";
+$basse-size: 1rem;
+
+body{
+    max-width: min(80ch, 100vw - 1rem);
+    margin-inline: auto;
+    background-color: red;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul :hover{
+    color: rgb(6, 171, 6);
+}
+
+picture > img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

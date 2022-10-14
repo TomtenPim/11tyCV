@@ -1,4 +1,6 @@
 const Image = require("@11ty/eleventy-img");
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
@@ -19,7 +21,14 @@ async function imageShortcode(src, alt, sizes) {
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css")
-    // eleventyConfig.addPassthroughCopy("src/images")
+    eleventyConfig.addPassthroughCopy("src/images")
+    let options = {
+      html: true
+    };
+    let markdownLibrary = markdownIt(options).use(markdownItAttrs);
+  
+    eleventyConfig.setLibrary("md", markdownLibrary);
+    
 
     // eleventyConfig.addShortcode('image',function (src, alt, width, height, classList){
     //     return `<img src="${src}" alt="${alt}" classList"${classList}" width="${width}" height="${height}">`;

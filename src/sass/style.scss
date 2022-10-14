@@ -6,7 +6,16 @@ body{
     margin-inline: auto;
     background-color: red;
     font-family: 'Arsenal', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
+
+    max-width: 45rem;
+    width: 100%;
+}
+
+main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: white;
 }
 
 nav ul{
@@ -25,4 +34,46 @@ picture > img{
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -2rem;
+    margin-top: -5.5rem;
+}
+
+h1{
+    max-width: 120%;
+    max-height: 120%;
+    color: red;
+}
+
+h2{
+    max-width: 100%;
+    max-height: 100%;
+    color: rgb(168,168,168);
+}
+
+h3{
+    max-width: 30%;
+    color: red;
+}
+
+h4{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    > img{
+        display: block;
+        max-width: 50%;
+        height: auto; 
+    }
 }

@@ -2,10 +2,11 @@
 layout: base.njk
 title: Ren Amamaiya CV
 ---
-# REN AMAMIYA
-## STUDENT, PHANTOM THIEF AND CAT DRIVER
 
-{% image "./src/images/RenAmamiya.png", "photo of my man", "(min-width: 30em) 50vw, 100vw" %}
+# REN AMAMIYA{.intro}
+## STUDENT, PHANTOM THIEF AND CAT DRIVER{.intro}
+
+{% image "./src/images/RenAmamiya.png", "photo of my man", "(min-width: 10em) 50vw, 50vw" %}{.intro}
 
 ### CONTACT INFORMATION
 

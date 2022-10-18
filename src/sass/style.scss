@@ -1,24 +1,29 @@
 @use "reset";
 $basse-size: 1rem;
 
-body{
+body {
     max-width: min(80ch, 100vw - 1rem);
     margin-inline: auto;
     background-color: red;
     font-family: 'Arsenal', sans-serif;
-    font-weight: 800;
+    font-weight: 600;
 
     max-width: 45rem;
     width: 100%;
 }
 
-main{
+main {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
     background-color: white;
 }
 
-nav ul{
+.flow>*+* {
+    margin-top: var(--flow-space, 1rem)
+}
+
+nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
@@ -26,41 +31,46 @@ nav ul{
     font-family: 'Courier New', Courier, monospace;
 }
 
-nav ul :hover{
+nav ul :hover {
     color: rgb(6, 171, 6);
 }
 
-picture > img{
+picture>img {
     display: block;
-    max-width: 100%;
+    max-width: 66%;
     height: auto;
+
+    @media(max-width: 420px) {
+        display: none;
+    }
+
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     margin-bottom: -2rem;
     margin-top: -5.5rem;
 }
 
-h1{
+h1 {
     max-width: 120%;
     max-height: 120%;
     color: red;
 }
 
-h2{
+h2 {
     max-width: 100%;
     max-height: 100%;
-    color: rgb(168,168,168);
+    color: rgb(168, 168, 168);
 }
 
-h3{
+h3 {
     max-width: 30%;
     color: red;
 }
 
-h4{
+h4 {
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -68,12 +78,19 @@ h4{
     color: white;
 }
 
-.intro{
+.intro-header {
     display: flex;
     align-items: center;
-    > img{
-        display: block;
-        max-width: 50%;
-        height: auto; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    >p>picture {
+        display: grid;
+        justify-items: end;
     }
+}
+
+.intro-header-subsection {
+    display: flex;
+    flex-wrap: wrap;
 }

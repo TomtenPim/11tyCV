@@ -22,6 +22,13 @@ async function imageShortcode(src, alt, sizes) {
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css")
     eleventyConfig.addPassthroughCopy("src/images")
+    eleventyConfig.addPairedShortcode("intro", function(content){
+      return `<div class="intro-header">${content}</div>`;
+    });
+    eleventyConfig.addPairedShortcode("intro-sub", function(content){
+      return `<div class="intro-header-subsection">${content}</div>`;
+    });
+
     let options = {
       html: true
     };
